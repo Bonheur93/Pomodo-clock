@@ -1,64 +1,51 @@
 import React from "react";
 
 
-class OnSessionLength extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            m: 25,
-            show: true,
-            min: 0
-        }
-    }
+function OnSessionLength(props){
+    
 
-    incrementation() {
+    const incrementation = ()=> {
         // e.preventDefault
-        this.setState(prevState => {
-            if (prevState.m < 50) {
-                return {
-                    m: prevState.m + 1
-                }
-            } else {
-                return null;
-            }
-        });
+        console.log(props.minute);
+        props.setSession({m: props.minute+1});
     }
 
-    decrementation = () => {
+    const decrementation = () => {
 
-        this.setState(prevState => {
-            if (prevState.m > 0) {
-                return {
-                    m: prevState.m - 1
-                }
-            } else {
-                return null;
-            }
+        if(props.minute !==0){
+            props.setSession({m: props.minute-1});
+        }
+        
+        else if(props.minute ===0){
+            props.setSession({m: props.minute+0});
+        }
+        }
 
-        });
-    }
-
-    TogglClick = () => {
+    const TogglClick = () => {
         this.setState({
             show: !this.state.show
         });
     }
-    handleChange = (Event) => {
+    const handleChange = (Event) => {
         this.setState({ m: Event.target.value });
     }
 
-    render() {
-        return (<div className="containrerBreak">
-            <p>Break Length</p>
-            <button onClick={this.decrementation.bind(this)} className="Bl">
+        return (<div className="containtSessionLength">
+           
+           <p>Session Length</p>
+           <div className="SessionL">
+            
+            <button onClick={decrementation} className="Bl">
                 <img src="arrow-down-solid.svg" alt="" width={15} />
             </button>
-            {this.state.m}
+            {props.minute}
 
-            <button onClick={this.incrementation.bind(this)} className="Bl">
+            <button onClick={incrementation} className="Bl">
                 <img src="arrow-up-solid.svg" alt="" width={15} />
             </button>
+           </div>
+            
         </div>);
     }
-}
+
 export default OnSessionLength 

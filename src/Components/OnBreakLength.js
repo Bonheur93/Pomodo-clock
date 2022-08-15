@@ -48,17 +48,21 @@ class OnBreakLength extends React.Component {
     }
 
     render() {
-        return (<div className="containrerBreak">
-                            <p>Break Length</p>
-                            <button onClick={this.decrement.bind(this)} className="Bl">
-                           <img  src="arrow-down-solid.svg" alt="" width={15}/>
-                        </button>
-                            {this.state.n} 
-                            
-                            <button onClick={this.increment.bind(this)} className="Bl">
-                           <img  src="arrow-up-solid.svg" alt="" width={15} />
-                         </button>
-                </div>
+        return (<div className="containtSessionLength">
+
+            <p>Break Length</p>
+            <div className="SessionL">
+                <button onClick={this.decrement.bind(this)} className="Bl">
+                    <img src="arrow-down-solid.svg" alt="" width={15} />
+                </button>
+                {this.state.n}
+
+                <button onClick={this.increment.bind(this)} className="Bl">
+                    <img src="arrow-up-solid.svg" alt="" width={15} />
+                </button>
+            </div>
+
+        </div>
 
         );
     }

@@ -1,10 +1,10 @@
 import React from "react";
 
-function Session(){
+function Session(props){
     return(
     <div className="session">
         <p className="">Session</p>
-        <p>24:00</p>
+        <p>{props.minute}:00</p>
     </div>
     )
 }

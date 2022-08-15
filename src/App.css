@@ -39,12 +39,23 @@ h1{
   margin-left: 20px;
   margin-right: 20px;
 }
+.containtSessionLength{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  color: white;
+}
+.SessionL{
+  display: flex;
+  justify-content: center;
+  gap:10px;
+}
 .up{
   width: 15px;
 }
 .down{
   width: 15px;
-  
   
 }
 .arrow{
