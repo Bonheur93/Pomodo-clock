@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
 import Body from './Components/Body';
-import ManualIncrement from './Components/Increment';
 
 
 class App extends Component {
@@ -9,7 +8,7 @@ class App extends Component {
     return (
      <div className="App ">
       <Body/>
-      <ManualIncrement/>
+      
      
      </div>
     );

@@ -1,8 +1,8 @@
 import React from "react";
-import SessionLength from "./Session length";
+import OnSessionLength from "./OnSessionLength"
 import Session from "./Session";
 import Button from "./Buttons";
-import ManualIncrement from "./Increment"
+import OnBreakLength from "./OnBreakLength"
 
 
 
@@ -12,8 +12,8 @@ function Body() {
             <div className="container">
                 <h1>25 + 5 Clock</h1>
                 <div className='Length'>
-                    <ManualIncrement />
-                    <SessionLength />
+                    <OnBreakLength />
+                    <OnSessionLength />
 
                 </div>
                 <div className="containerSession">

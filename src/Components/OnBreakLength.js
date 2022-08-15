@@ -1,11 +1,12 @@
 import React from "react"
 
-class ManualIncrement extends React.Component {
+
+class OnBreakLength extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             n: 5,
-            show: 10,
+            show: true,
             min: 0
 
         }
@@ -47,33 +48,24 @@ class ManualIncrement extends React.Component {
     }
 
     render() {
-        return (<div className="containrerBreak">{this.state.n} 
-                            
+        return (<div className="containrerBreak">
+                            <p>Break Length</p>
                             <button onClick={this.decrement.bind(this)} className="Bl">
-        //                     <img className="down" src="arrow-down-solid.svg" alt="" />
-        //                 </button><span><p value= {this.state.n} onChange={this.handleChange}></p></span>
+                           <img  src="arrow-down-solid.svg" alt="" width={15}/>
+                        </button>
+                            {this.state.n} 
                             
                             <button onClick={this.increment.bind(this)} className="Bl">
-            //                 <img className="up" src="arrow-up-solid.svg" alt="" />
-            //             </button>
+                           <img  src="arrow-up-solid.svg" alt="" width={15} />
+                         </button>
                 </div>
-        // return <div className="arrow">
-        //             <button className="Bl">
-        //                 <img className="up" src="arrow-up-solid.svg" alt="" />
-        //             </button>
 
-        //             <p>5</p>
-        //             {/* <button className="Bl">
-        //                     <img className="down" src="arrow-down-solid.svg" alt="" />
-        //                 </button> */}
-
-        //         </div>
-
-        //     // <div className="containrerBreak">
-        //     //     <p>Break Length</p>
-
-        //     // </div>
         );
     }
 }
-export default ManualIncrement
+export default OnBreakLength
+
+
+
+
+
