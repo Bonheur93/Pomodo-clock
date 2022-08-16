@@ -1,36 +1,38 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 import OnSessionLength from "./OnSessionLength"
 import Session from "./Session";
-import Button from "./Buttons";
+import ButtonStart from "./ButtonStart"
 import OnBreakLength from "./OnBreakLength"
 
 
 
+
 function Body() {
-    let donnes = 6;
-        
-    const [session, setSession ] = useState({
-            m: 25,
-            show: true,
-            min: 0
-        })
-    
+
+
+    const [session, setSession] = useState({
+        minute: 25,
+        seconde: 30,
+        show: true
+    })
+
     return (
         <body>
             <div className="container">
                 <h1>25 + 5 Clock</h1>
                 <div className='Length'>
-                    <OnBreakLength  />
-                    <OnSessionLength u={donnes} minute={session.m} session={session} setSession={setSession} />
+                    <OnBreakLength />
+                    <OnSessionLength minute={session.minute} session={session} setSession={setSession} />
 
                 </div>
                 <div className="containerSession">
 
 
-                    <Session minute={session.m}/>
+                    <Session minute={session.minute} />
                 </div>
                 <div className="buttonsOperation">
-                    <Button />
+                    {/* <Button /> */}
+                    <ButtonStart session={session} setSession={setSession} />
                 </div>
 
                 <br />

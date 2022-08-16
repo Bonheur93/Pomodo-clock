@@ -6,7 +6,6 @@ function OnSessionLength(props){
 
     const incrementation = ()=> {
         // e.preventDefault
-        console.log(props.minute);
         props.setSession({m: props.minute+1});
     }
 
