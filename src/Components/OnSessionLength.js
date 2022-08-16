@@ -6,17 +6,17 @@ function OnSessionLength(props){
 
     const incrementation = ()=> {
         // e.preventDefault
-        props.setSession({m: props.minute+1});
+        props.setSession({...props.session, minute: props.minute+1, seconde: 59});
     }
 
     const decrementation = () => {
 
         if(props.minute !==0){
-            props.setSession({m: props.minute-1});
+            props.setSession({...props.session, minute: props.minute-1, seconde: 59});
         }
         
         else if(props.minute ===0){
-            props.setSession({m: props.minute+0});
+            props.setSession({minute: props.minute+0});
         }
         }
 
@@ -26,7 +26,7 @@ function OnSessionLength(props){
         });
     }
     const handleChange = (Event) => {
-        this.setState({ m: Event.target.value });
+        this.setState({ minute: Event.target.value });
     }
 
         return (<div className="containtSessionLength">
@@ -38,7 +38,6 @@ function OnSessionLength(props){
                 <img src="arrow-down-solid.svg" alt="" width={15} />
             </button>
             {props.minute}
-
             <button onClick={incrementation} className="Bl">
                 <img src="arrow-up-solid.svg" alt="" width={15} />
             </button>

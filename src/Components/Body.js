@@ -12,7 +12,7 @@ function Body() {
 
     const [session, setSession] = useState({
         minute: 25,
-        seconde: 30,
+        seconde: 60,
         show: true
     })
 
@@ -28,7 +28,7 @@ function Body() {
                 <div className="containerSession">
 
 
-                    <Session minute={session.minute} />
+                    <Session minute={session.minute} seconde={session.seconde} />
                 </div>
                 <div className="buttonsOperation">
                     {/* <Button /> */}

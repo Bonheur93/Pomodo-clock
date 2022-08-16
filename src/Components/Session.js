@@ -4,7 +4,7 @@ function Session(props){
     return(
     <div className="session">
         <p className="">Session</p>
-        <p>{props.minute}:00</p>
+        <p>{props.minute}:{props.seconde}</p>
     </div>
     )
 }
