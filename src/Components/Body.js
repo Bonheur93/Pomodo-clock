@@ -10,7 +10,7 @@ import OnBreakLength from "./OnBreakLength"
 function Body() {
 
 
-    const [session, setSession] = useState({
+    const [session, setSession,] = useState({
         minute: 25,
         seconde: 60,
         show: true

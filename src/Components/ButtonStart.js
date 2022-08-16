@@ -17,14 +17,14 @@ function ButtonPlays (props){
             props.setSession({...props.session,seconde: props.session.seconde-=1});
             console.log(props.session.seconde);
     //Si secondsLeft est 0, alors nous appelons clearIntervalpour effacer la minuterie.
-            if (props.session.seconde === 0){
-                //Nous exécutons le setIntrvalrappel toutes les secondes.
-                clearInterval(timer);
-            }else{
-
+            if (props.session.seconde <= 0){
+               props.setSession({...props.session,minute: props.session.minute-=1}) 
+               props.setSession({...props.session, seconde: 59})
+               //Nous exécutons le setIntrvalrappel toutes les secondes.
+                
             }
+            
         }, 1000);
-        setTimer(timer);
     };
  // Arret de chhrono  quand secLeft est 0 en appelant clearInterval
     useEffect(() =>{
@@ -35,6 +35,8 @@ function ButtonPlays (props){
     }, [props.session.seconde, timer]);
  // Le deuxième useEffect rappel qui renvoie une fonction à appeler clearIntervalpour effacer le minuteur lorsque nous démontons le composant.
     useEffect(() =>{
+
+        
         return()=> clearInterval(timer)
     }, [timer]);
 
