@@ -17,9 +17,10 @@ function ButtonPlays (props){
             props.setSession({...props.session,seconde: props.session.seconde-=1});
             console.log(props.session.seconde);
     //Si secondsLeft est 0, alors nous appelons clearIntervalpour effacer la minuterie.
-            if (props.session.seconde <= 0){
+            if (props.session.seconde === 0){
                props.setSession({...props.session,minute: props.session.minute-=1}) 
-               props.setSession({...props.session, seconde: 59})
+               props.setSession({...props.session, seconde : props.session.seconde += 59})
+               //props.decrementation({ props.setSession({...props.session, minute: props.minute-1, seconde: 59})})
                //Nous exécutons le setIntrvalrappel toutes les secondes.
                 
             }

@@ -10,7 +10,12 @@ import OnBreakLength from "./OnBreakLength"
 function Body() {
 
 
-    const [session, setSession,] = useState({
+    const [session, setSession] = useState({
+        minute: 25,
+        seconde: 60,
+        show: true
+    })
+    const [session1, setSession1] = useState({
         minute: 25,
         seconde: 60,
         show: true
@@ -22,17 +27,17 @@ function Body() {
                 <h1>25 + 5 Clock</h1>
                 <div className='Length'>
                     <OnBreakLength />
-                    <OnSessionLength minute={session.minute} session={session} setSession={setSession} />
+                    <OnSessionLength minute={session.minute} session={session} setSession={setSession} setSession1={setSession1}/>
 
                 </div>
                 <div className="containerSession">
 
 
-                    <Session minute={session.minute} seconde={session.seconde} />
+                    <Session minute={session1.minute} seconde={session1.seconde} />
                 </div>
                 <div className="buttonsOperation">
                     {/* <Button /> */}
-                    <ButtonStart session={session} setSession={setSession} />
+                    <ButtonStart session={session1} setSession={setSession1} />
                 </div>
 
                 <br />

@@ -6,13 +6,15 @@ function OnSessionLength(props){
 
     const incrementation = ()=> {
         // e.preventDefault
-        props.setSession({...props.session, minute: props.minute+1, seconde: 59});
+        props.setSession({...props.session, minute: props.minute+1, seconde: 0});
+        props.setSession1({...props.session, minute: props.minute+1, seconde: 0});
     }
 
-    const decrementation = () => {
+    const decrementation = (props) => {
 
         if(props.minute !==0){
             props.setSession({...props.session, minute: props.minute-1, seconde: 59});
+            props.setSession1({...props.session, minute: props.minute-1, seconde: 0});
         }
         
         else if(props.minute ===0){
