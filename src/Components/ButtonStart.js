@@ -26,7 +26,7 @@ function ButtonPlays (props){
                 
             }}
             
-        }, 10);
+        }, 1000);
         
     };
  // Arret de chhrono  quand secLeft est 0 en appelant clearInterval
