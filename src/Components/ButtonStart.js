@@ -12,8 +12,9 @@ function ButtonPlays (props){
     // La start fonction crée une minuterie avec la setIntervalfonction.   
     const start = () =>{
     
-    
+     
         const timer = setInterval(() => {
+            if (props.session.minute > 0 && props.session.seconde>0) {
             props.setSession({...props.session,seconde: props.session.seconde-=1});
             console.log(props.session.seconde);
     //Si secondsLeft est 0, alors nous appelons clearIntervalpour effacer la minuterie.
@@ -23,9 +24,10 @@ function ButtonPlays (props){
                //props.decrementation({ props.setSession({...props.session, minute: props.minute-1, seconde: 59})})
                //Nous exécutons le setIntrvalrappel toutes les secondes.
                 
-            }
+            }}
             
-        }, 1000);
+        }, 10);
+        
     };
  // Arret de chhrono  quand secLeft est 0 en appelant clearInterval
     useEffect(() =>{

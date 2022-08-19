@@ -12,17 +12,17 @@ function Body() {
 
     const [session, setSession] = useState({
         minute: 25,
-        seconde: 60,
+        seconde: 59,
         show: true
     })
     const [session1, setSession1] = useState({
         minute: 25,
-        seconde: 60,
+        seconde: 59,
         show: true
     })
 
     return (
-        <body>
+        <div  className="body">
             <div className="container">
                 <h1>25 + 5 Clock</h1>
                 <div className='Length'>
@@ -51,7 +51,7 @@ function Body() {
 
             </div>
 
-        </body>
+        </div>
     )
 }
 export default Body
