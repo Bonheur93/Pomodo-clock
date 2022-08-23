@@ -22,14 +22,14 @@ function OnSessionLength(props){
         }
         }
 
-    const TogglClick = () => {
-        this.setState({
-            show: !this.state.show
-        });
-    }
-    const handleChange = (Event) => {
-        this.setState({ minute: Event.target.value });
-    }
+    // const TogglClick = () => {
+    //     this.setState({
+    //         show: !this.state.show
+    //     });
+    // }
+    // const handleChange = (Event) => {
+    //     this.setState({ minute: Event.target.value });
+    // }
 
         return (<div className="containtSessionLength">
            
