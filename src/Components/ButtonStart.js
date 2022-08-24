@@ -35,7 +35,7 @@ function ButtonPlays (props){
                 clearInterval(intervale.current)
              }
             
-        }, 100);
+        }, 1000);
         
     };
 
@@ -65,9 +65,10 @@ function ButtonPlays (props){
 
     clearInterval(intervale.current)
  
-    props.setSession({...props.session,minute:25})
-    props.setSession({...props.session,seconde: 0})
+    props.setSession({...props.session,seconde: 0, minute:25})
  }
+
+
 
     return(
         <div className="buttonsOperation">

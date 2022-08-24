@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useMemo, useState } from "react";
 import OnSessionLength from "./OnSessionLength"
 import Session from "./Session";
 import ButtonStart from "./ButtonStart"
@@ -21,9 +21,16 @@ function Body() {
         show: true
     })
 
+    const clignot= useMemo( () => {
+        if(session1.minute < 5) {
+            return true
+        }
+        else return false;
+    }, [session1.minute])
+
     return (
         <div  className="body">
-            <div className="container">
+            <div className={ clignot ? "container Clignot" : "container" } >
                 <h1>25 + 5 Clock</h1>
                 <div className='Length'>
                     <OnBreakLength />
